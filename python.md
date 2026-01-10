@@ -126,29 +126,18 @@ Dictionaries
 - else
 - elif
 - ternary : value_if_true if condition else value_if_false
+- status = "adult" if age >= 18 else "minor"
 
 
 ### Iterations
 
-for -> continue till constraints
-
-for i in range(start, end, stepsize):   
-// logic
-
-while -> contiue as long condn is true   
-
-use of flag= true/ false --> to control loop, multi inside condn  
-
-scope of a loop variable extends beyond the loop itself. This means that even after the loop completes, the variable still retains its last assigned value.
-
-
+- for i in range(start, end, stepsize):   
+- while -> contiue as long condn is true   
 
 - break: exit loop
 - continue: skip that specific iteration
 - pass: null opt (placeholder)
 - exit: exit program
-- for else execute a block of code after a loop completes, but only if the loop was not interrupted by a break statement.
-- 
 
 ### Shallow copy:
 a= [1,2,3, [36, 38, 40], "apple"]   

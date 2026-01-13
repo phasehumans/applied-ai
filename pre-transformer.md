@@ -1,0 +1,171 @@
+### Pre-Transformer
+
+- ai : getting machines to perform tasks that req human intelligence
+- hardcode intelligence (symbolic ai era)
+    - how do we hardcode intelligence?
+        - explicitly writing rules that tells machines what to do in every situation
+        - if and then
+        - rule based : encode expert knowledge
+    - examples of rule based systems?
+        - early chess engines
+        - spam filters before ml
+        - eliza chatbot
+        - npc's in games
+    - what were drawbacks that lead to ml?
+        - rule based dont scale, adapt, generalize, improve over time
+        - ambiguity
+        - rules conflicting rules
+        - reality refuses to fit into rules
+        - intelligence is not list of rules , it is process of learning from exp
+        - stop telling machines what are rules, let them derive rules from data (rules --> patterns)
+- machine learning
+    - what is machine learning?
+        - way to make computers learn patterns from data
+        - itelligence = patterns discovery + generalization
+        - adjust numbers (paramters) based on mistakes
+        - learning lives in model
+        - find mistakes through loss (error) and adjust parameters
+        - ml dont try to be perfect, it try to be less wrong over time
+    - types and examples of machine learning algorithms?
+        - supervised learning - learn with answers/output
+            - learning a mapping from input to output using labled(input + corrrect answer attach) examples
+            - classification -> put into right bucket
+                - spam/notspam, fraud/notfraud, cat/dog
+                - draw boundries using past examples
+                - knn
+                - logistic regression
+                - naive bayes
+                - decision tree
+                - random forest
+                - svm (support vector machine)
+            - regression -> predict a number
+                - house price prediction, delivery time predicition
+                - fn that map input ---> numbers
+                - linear regression
+                - polynomial regression
+                - knn regression
+                - decision tree regression
+                - random forest regression
+                - svr (support vector regression)
+            - cant discover unknown patterns
+            -need label data (expensive)
+        - unsupervised learning - learns without answers
+            - learning w/o label
+            - explore data itself and discover structure, patterns
+            - clustering -> discover grouping
+                - grouping similar datapoints together w/o knowing groups in advance
+                - k-means
+                - hierarchical clustering (agglomerative and divisive)
+                - dbscan
+                - mean shift
+                - gausssian mixture models
+            - dimensionality reduction -> simplify complex data w/o losing meaning
+                - represnt high dimension data into fewer and meaningful dimension
+                - pca (principal component analysis)
+                - t-sne
+                - umap
+                - autoencoders
+            - anomaly detection -> spot unusual
+                - far from avg
+                - far from neighbors
+                - sparse density
+                - tiny clusters
+                - isolation forest
+        - reinforcement learning - learn from reward and punishment
+            - learn by doing, not by being told
+            - learn from consequences, not answers
+            - agent, env, state, action, reward
+            - value based methods -> how good is this situation
+                - q-learning
+            - policy based methods -> what should i do |state --> action|
+            - actor-crictic methods -> one act, one judge
+            - model based rl -> think before act
+            - rl rewards are sparse
+            - training is unstable
+            - not prediction, but control
+        - semi-supervised learning - little guidance, a lot of exploration (few labels + lot of data)
+        - self-supervised learning - learning by creating own tasks (predict missing info) --> base of llms
+    - what are important concepts in ml?
+        - data
+        - features - measurements, properties, signals
+        - parameters - internal numbers inside model that store what model has learned from data
+        - model - fn w/ parameters
+        - loss fn - distance betn prediction and reality
+        - learning - reducing loss fn
+        - optimization - process of adjust model (fn w/ para)
+        - generalization - performace on unseen data
+        - overfitting - memorized noise
+        - underfitting - didn't learn enough
+        - bias - simplicity
+        - variance - sensitivity
+        - evaluation metrics - accuracy, precision, recall
+        - hyperparameters -  controllers for learning rate
+        - assumptions - hidden beliefs
+    - fundamental diff betn ml and dl?
+        - feature engineering - tell model what to look for
+        - ml cant learn good representation by itself
+        - in dl, models auto learn hierarchical features from raw data using layers
+        - ml : input + feat-eng --> output
+        - dl : input --->  layer | layer | layer | layer | ...| layers | ---> output
+    - what are fundamentals of ml that are carry forward to dl and transformers?
+        - core of ml -> guess > measure error > adjust > repeat
+        - representation
+        - model is still fn with parameters
+            - what are parameters?
+                - numbers that represent learning
+                - learned numbers / memory of models
+                - weight
+                - bias
+        - loss fn; goal is to reduce loss
+        - optimization
+        - generalization
+    - what drawbacks of ml that leads to neural networks?
+        - classical ml cant learn representations by itself
+        - real world data is non-linear and complex
+        - cant represent hierarchical concepts
+        - manual feat eng
+        - cant learn representation
+        - neural networks for representation learning
+- neural networks
+    - what are neural networks?
+        - learns by applying many small transformations in sequence, where is each transformations builds on prev one
+        - to build models, that can learn in layers
+        - neurons - tiny pattern detectors
+        - layers - abstraction levels
+        - parameters - learned knowledge
+    - how does the nueral networks are actually trained?
+        - input -> vector of numbers (image - pixel, text - token, audio - wave amplitudes)
+        - forward propagation - structured guess
+        - back propagation - traces responsibility backward and assigns blame proportionally
+        - parameters are updated to reduce loss
+        - networks dont understand concepts, it reacts to patterns
+        - loop:
+            - inputs go forward
+            - network predicts output
+            - loss is calculated
+            - errors flow backward
+            - parameters are adjusted
+    - what is rnn?
+        - invented to give nueral networks memory
+        - nn that passes info from one step to next, so it can remember the past
+        - hidden state is memory of nn
+        - hidden state is vector of numbers, that summarizes everything seen so far
+        - rnn memory is fragile and slow
+    - how rnn is different from nueral network?
+        - rnn is neural network
+        - normal nn has no memory, treats each input independently
+        - rnn feeds its previos output back into itself
+        - nn : input --> |layers| --> output
+        - rnn : input --> memory1 ; input + memory1 ---> memory2 ; ....
+    - examples of rnn?
+        - predictive keyboards
+        - early google translation
+    - what are limitations of rnn?
+        - weak long term memory
+        - training is slow
+        - attention is better
+    - diff betn cnn and rnn?
+        - cnn for image / space
+        - rnn for sequence / time
+        - cnn process parallel
+        - rnn process sequentail

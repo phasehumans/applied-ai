@@ -1,5 +1,5 @@
 
-### Arrays
+### Arrays & Hashing
 
 - what is array data structure?
     - python dont have built in array, we use list, array module or numpy
@@ -39,5 +39,26 @@
     - binary search
     - monotonic stack
     - bit manipulation
-
---------------
+- what is hashing/hashtable?
+    - technique to convert values into array indexes for fast lookup
+    - collisions
+    - fast access by value
+    - array + hashing = hashtable
+    - hashmap : key -> value (value -> count)
+    - hashmap is logical abstraction of hashtable
+    - d["apple"] = 5; apple -> hash(apple) -> index
+    - table[index] = ("apple", 5)
+- when to use hashmaps?
+    - repeated searching
+    - counting freq
+    - fast existence checking
+    - mapping relationships
+    - seen before patterns
+    - prefix sum + hashing
+- how to use hashmaps?
+    - key → hash → index → array slot
+    - name['index'] = value
+    - get('index', 0) - avoid keyerr
+    - setdefault('index', 0)
+    - items, keys, values
+-----------

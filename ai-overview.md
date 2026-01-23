@@ -292,10 +292,31 @@
         - models are train to continue, not check reality
         - for hallucination, input needs to be high pattern simlarity : scientific discovery → physicist → institute → paper → year
     - what is foundational models?
+        - general purpose intelligence
+        - general representation of reality
     - what is llm?
+        - large language model
+        - large number of parameters - billion to trillion
+        - gpt4, claude, gemini
     - what is slm?
-    - what is diff betn transformer, bert, gpt, llms?
-    - what are other architecture other than transformer?
+        - small language model
+        - smaller number of parameters - million
+        - phi-2, mistral7b, distilBERT
+    - what are other architecture than transformer?
+        - feedforward neural networks (fnn)
+        - convolutional neural networks (cnn)
+        - recurrent neural networks (rnn)
+        - long short term memory (lstm)
+        - gated recurrent unit (gru)
+        - graph neural networks (gnn)
+        - capsule networks
+        - autoencoders
+        - diffusion models
+        - state space models(ssm) - s4, mamba, rwkv -> o(n)
+        - neural turing machines - nets + ram
+        - modular neural nets
+        - world model architectures - deepminde mu0, dreamer, gato
+        - agent architectures - autogpt, react, tree of thoughts
 --- 
 - [LLM visualization](https://bbycroft.net/llm)
 - attention is all you need (transformer paper)

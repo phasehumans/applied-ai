@@ -1,4 +1,4 @@
-### AI Overview
+### Artificial Intelligence
 
 - what does it mean to learn?
     - building accuarate mental model to understand, predict and use
@@ -152,6 +152,31 @@
         - learns by applying many small transformations in sequence, where is each transformations builds on prev one
         - to build models, that can learn in layers
         - neurons - tiny pattern detectors
+            - what is neuron?
+                - also called perceptron
+                - mathematical fn
+                - output = activation(weighted sum of inputs: w1x1 + w2x2 ... + bias)
+                    - what is bias, why do we add bias?
+                        - bias is default tendency, from where to start
+                        - w/o bias, restrict learning
+                        - gives neuron freedom to activate even when inputs are zero
+                - tiny decision making unit that learns how imp each input should be
+                - neuron has inputs, weights, activation fn
+            - what is activation fn?
+                - w/o activation fn, we face linearity problem
+                - reality is non-linear and complex
+                - fn decide how much a neuron should activate based on its input
+                - controls the fire rate, decide how much to react
+                - examples of activation fn
+                    - sigmoid (0 to 1)
+                    - tanh (-1 to 1)
+                    - relu (max(x,0))
+                    - gelu and swish
+            - what is weights?
+                - weight represent how imp is this input
+                - learning is to find correct values of weights
+            - what is loss fn?
+                - 
         - layers - abstraction levels
         - parameters - learned knowledge
     - how does the nueral networks are actually trained?
@@ -297,6 +322,7 @@
     - what is llm?
         - large language model
         - large number of parameters - billion to trillion
+        - [LLM visualization](https://bbycroft.net/llm)
         - gpt4, claude, gemini
     - what is slm?
         - small language model
@@ -317,6 +343,3 @@
         - modular neural nets
         - world model architectures - deepminde mu0, dreamer, gato
         - agent architectures - autogpt, react, tree of thoughts
---- 
-- [LLM visualization](https://bbycroft.net/llm)
-- attention is all you need (transformer paper)
